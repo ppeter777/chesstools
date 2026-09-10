@@ -18,4 +18,11 @@ public class EngineCandidate {
     private long timeMs;
     private String pv;
 
+    public String getBestMove() {
+        if (pv == null || pv.isBlank()) {
+            return null;
+        }
+        return pv.split("\\s+")[0];
+    }
+
 }
